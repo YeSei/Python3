@@ -1,0 +1,1 @@
+# 一个简单的key，value的文件持久化模块，可持久化任何在pickle中可支持的python数据格式
