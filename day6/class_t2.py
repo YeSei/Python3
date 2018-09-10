@@ -12,7 +12,7 @@ class Role:
         self.name = name  # r1.name=name实例变量(静态属性),作用域就是实例本身
         self.role = role
         self.weapon = weapon
-        self.__life_value = life_value
+        self.__life_value = life_value  # 私有属性以双下划线开头，实例不可访问，可定义函数访问。
         self.money = money
 
     def __del__(self):
@@ -23,7 +23,7 @@ class Role:
                                                  self.weapon,
                                                 self.__life_value))
 
-    def __shot(self):  # 类的方法，功能 （动态属性）
+    def __shot(self):  # 类的私有方法，功能 （动态属性）
         print("shooting...")
 
     def got_shot(self):

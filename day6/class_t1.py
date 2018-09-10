@@ -18,3 +18,17 @@ d1.bulk()
 d2.bulk()
 d3.bulk()
 d4.bulk()
+
+class super(object):   # 抽象超类，也就是类的部分行为默认是由其子类所提供的。
+    def action(self):
+        print("super")
+        self.action()   # 抽象超类的action（）功能由子类实现。
+
+class pro(super):
+    def action(self):
+        print("pro")
+
+x = pro()
+x.action()
+super.action(x)
+super.action(pro())
